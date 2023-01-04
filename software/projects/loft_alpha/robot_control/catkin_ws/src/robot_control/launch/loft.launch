@@ -1,0 +1,64 @@
+<launch>
+
+<!-- robot parameters -->
+<param name="wheel_radius" type="double" value="0.16" />
+<param name="robot_radius" type="double" value="0.27" />
+
+<!-- update rate parameters -->
+<param name="robot_control_hz" type="double" value="50" />
+<param name="neural_control_hz" type="double" value="50" />
+<param name="planning_hz" type="double" value="5.0" />
+
+<!-- sensor parameters -->
+<param name="n_sensor" type="int" value="14" />
+<!-- <param name="sensor_limit" type="double" value="5.0" /> -->
+<param name="sensor_limit" type="double" value="2.0" />
+<param name="cover_range" type="double" value="120.0" />
+<param name="detectionlength_gain" type="double" value="1.0" />
+<param name="detectionangle_gain" type="double" value="1.0" />
+<param name="detectionangle_offset" type="double" value="3.14159" />
+
+<!-- control parameters -->
+<!-- <param name="learning_rate" type="double" value="1000.0" /> -->
+<param name="learning_rate" type="double" value="1.0" />
+<param name="learned_weight" type="double" value="0.0" /> 
+<param name="v_gain" type="double" value="0.0" /> 
+<param name="w_gain" type="double" value="0.0" /> 
+<param name="manualCommand_gain" type="double" value="2.0" />
+<param name="max_speed" type="double" value="0.5" />
+<param name="sleept" type="int" value="500" />
+
+<!-- planning parameters -->
+<param name="coarse_step" type="int" value="2" />
+<param name="speed_resolution" type="double" value="0.05" />
+<param name="yaw_resolution" type="double" value="0.5" />
+<param name="predict_time" type="double" value="3.0" />
+<param name="dt" type="double" value="0.1" />
+<param name="clearance_gain" type="double" value="1.0" />
+<param name="heading_gain" type="double" value="10.0" />
+<param name="velocity_gain" type="double" value="0.0" />
+
+<!--
+<param name="speed_resolution" type="double" value="0.05" />
+<param name="predict_time" type="double" value="2.0" />
+<param name="dt" type="double" value="0.05" />
+<param name="clearance_gain" type="double" value="1.0" />
+<param name="heading_gain" type="double" value="10.0" />
+-->
+
+<!-- LOFT controller node -->
+<group ns="/LOFT">
+        <node name="dwa_planner" pkg="dwa_planner" type="dwa_planner" output="screen" required="true"/>
+        <node name="neural_control" pkg="neural_control" type="neural_control" output="screen" required="true"/>
+        <node name="robot_control" pkg="robot_control" type="robot_control" output="screen" required="true"/>
+</group>
+
+<!-- other node -->
+<!--
+<node name="socket_receiver" pkg="socket_receiver" type="receiver.py" output="screen" required="false"/>
+<node name="joystick" pkg="joystick" type="joystick" output="screen" required="false"/>
+-->
+
+
+
+</launch>
