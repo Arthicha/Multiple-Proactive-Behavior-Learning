@@ -63,33 +63,16 @@ rqt --perspective-file "loft.perspective"
 
 
 ### Running: Robot Interface
-- Start the robot interface (DTI).
+- Start the robot interface.
 
 
 # Results
 
 ### Corridor Simulation
 
-This result was obtained from the controllers operating at 5 Hz, in a corridor simulation.
-
-
 ![smoothness_result_corridor_environment_5hz](picture/smoothness_result_corridor_environment_5hz.png)
-
-statistics (mean)    | only planning (blue) | with NPC (orange) 
-:-------------------:|:-------------:|:------------:
-forward acceleration |   1.769 cm/s  | 1.520 cm/s
-sideway acceleration |   0.029 cm/s  | 0.021 cm/s
-yaw acceleration     |   0.128 cm/s  | 0.115 cm/s
 
 
 ### Dynamic Simulated Environment
 
-This result was obtained from the controllers operating at 2 Hz, in a dynamic environment simulation.
-
 ![collision_result_dynamic_environment_2hz](picture/collision_result_dynamic_environment_2hz.png)
-
-statistics (mean)     |       only planning (blue)     | with NPC (orange) 
-:--------------------:|:-----------------------:|:----------------------:
-hit rate              |   0.041 hit/timestep    | 0.026 hit/timestep
-goal achievement rate |   0.0030 goal/timestep  | 0.0037 goal/timestep
-hit per goal achieved |   13.614 hit/goal       | 6.999 hit/goal
