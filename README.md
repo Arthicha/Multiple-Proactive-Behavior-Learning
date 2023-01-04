@@ -1,8 +1,8 @@
-# LOFT: Long-term autOnomy For service robots in consTruction
+# Multiple Proactive Behavior Learning (MPL)
 
 ![control](picture/control.png)
 
-https://ens-lab.sdu.dk/loft-project/
+Project page: https://ens-lab.sdu.dk/loft-project/
 
 # Simulation
 
@@ -48,7 +48,7 @@ source $PROJECT_PATH/LOFT/software/projects/loft_alpha/socket/catkin_ws/devel/se
 ### Running: Human Detection
 - Start the human detection programs (DTU) and the publisher socket (SDU).
 
-### Running: Planning and Neural Control (Neural Proactive Control; NPC)
+### Running: Planning and Neural Control (Multiple Proactive Behavior Learning; MPL)
 
 - Start the coppeliasim scene
 - Start the planning and neural control (SDU) by open the rqt gui using the following command.
