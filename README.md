@@ -73,7 +73,7 @@ rqt --perspective-file "loft.perspective"
 #### Experimental Setup
 To compare the performance of our unsupervised correlation-based learning (DWA+MPL (unsup.)) and supervised learning (DWA+MPL (sup.)), the robot had to move from A to B where there was an obstacle on its path. It started to drive forward and then detected an obstacle. Thus, it had to avoid the obstacle, moved forward, and stopped at the goal (B).  
 
-![setup](picture/fitexp_setup.png)
+![setup](picture/fitexp_setup.PNG)
 
 For supervised learning, we used two different input-output mapping models as our MPL module and the recorded DWA planner’s outputs (velocity and angular velocity commands) as the ‘true target’. The two models are:
 i)	A linear model (i.e., a simple neural network/perceptron with one input layer, one output layer, and a linear activation function, called DWA+MPL (single net, sup.)). This network setup is similar to our simple MPL model with unsupervised learning,
@@ -82,8 +82,8 @@ We compared the outputs of the two models (DWA+MPL (single net and deep net, sup
 
 #### Experimental Results
 
-![linear](picture/fitexp_linear.png)
-![angular](picture/fitexp_angular.png)
+![linear](picture/fitexp_linear.PNG)
+![angular](picture/fitexp_angular.PNG)
 
 When using the DWA outputs as ‘true target’, the linear model with learned/fixed control parameters (DWA+MPL (single net, sup.)) yields unusable output linear and angular velocity commands (blue dash lines in both graphs). Specifically, the linear model generated the large error outputs (i.e., large negative linear command at the beginning (0.0-2.5 s, moving backward), followed by large/overshoot positive linear and angular velocity commands at the end). 
 
@@ -99,4 +99,10 @@ In contrast, our approach (DWA+MPL (single net, unsup.)), adapting the control p
 
 ### Dynamic Simulated Environment
 
+
 ![collision_result_dynamic_environment_2hz](picture/collision_result_dynamic_environment_2hz.png)
+
+
+#### Navigation under Different Amount of Moving Obstacle and Speeds
+
+![exp_nobs_vobs](picture/exp_nobs_vobs.PNG)
