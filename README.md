@@ -103,6 +103,6 @@ In contrast, our approach (DWA+MPL (single net, unsup.)), adapting the control p
 ![collision_result_dynamic_environment_2hz](picture/collision_result_dynamic_environment_2hz.png)
 
 
-#### Navigation under Different Amount of Moving Obstacle and Speeds
+#### Navigation under Different Moving Obstacle Numbers and Speeds
 
 ![exp_nobs_vobs](picture/exp_nobs_vobs.PNG)
