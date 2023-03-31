@@ -107,4 +107,6 @@ In contrast, our approach (DWA+MPL (single net, unsup.)), adapting the control p
 
 The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as moving obstacles. The number of simulated people were tested at 4, 6, 8, and 12 people, while the speed of each was tested at 20%, 40%, and 60% of the robot maximum speed. The people cannot see or avoid the robot, so the robot's mission was to avoid collisions while moving toward random goals, which were changed after the acceptance radius of 7 cm was reached. The experiment was run for  1 hrs for each testing condition. 
 
+The figure below presents the numbers of collision in all testing conditions, where red cell denotes the condition with high collisions (>= 20 times) and blue cell denotes the condition with few collisions (<= 10 times). At the maximum performance (i.e., maximum update rate and converged weights), the simulated robot with the proposed control (DWA+MPL 10/50 Hz) can avoid all collisions when there are four moving obstacles with speeds less than 40% of the robot maximum speed. 
+
 ![exp_nobs_vobs](picture/exp_nobs_vobs.PNG)
