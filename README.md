@@ -9,6 +9,7 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 ## Content
 
 - [Simulation Experiment](#simulation-experiment)
+- [Physical Robot Experiment](#physical_robot_experiment)
 - [Supervised Learning vs Unsupervised Learning](#supervised_learning_vs_unsupervised_learning)
 - [Navigation with Different Moving Obstacle Numbers and Speeds](#navigation-with-different-moving-obstacle-numbers-and-speeds)
 - [Usage](#usage)
@@ -26,6 +27,13 @@ static environment            |  dynamic environment
 ![image](picture/physical_robot_system.png)
 
 The MPL was implemented on a physical robot, and the robustness to real-world uncertainties investigated, as depicted in the figure. First, the robot was placed 2.0 m in front of a human with the goal located behind. The stereo camera then detected and estimated the human pose using a stereo depth map. Next, the pose was sent to the simulation. Subsequently, the simulation created a obstacle, and the motion planning (DWA or DWA+MPL with the learned weights from the simulation experiment) applied the simulated lidar feedback to continuously produce the velocity commands. The velocity commands were then sent to the robots in real time. Finally, both physical and simulated robots moved to the goal and avoided the human. During the process, an LED light was employed to inform people for simple, safe navigation of the robot. It turned purple when no human was detected, while it turned red, yellow, and green when the closest detected human was below 2.0 m, between 2.0–2.5 m, and over 2.5 m, respectively. 
+
+DWA            |  DWA+MPL
+:-------------------------:|:-------------------------:
+![image](picture/real_dwa.png) |   ![image](picture/real_npc.png)
+
+The results of this experiment are shown in the figure and can be viewed at [external link](https://youtu.be/ojCR_I4Qslw). Due to the physical and system uncertainties (e.g., sensory noise, communication delays, and reality gap), the DWA produced inconsistent behaviors. From five experimental trials, two collided with the human, one collided with other objects, and only two were successful, as shown in the video. In the collided trial shown in the figure, the robot still used its maximum speed during 1.0--2.5 s even if detecting a human, as can be observed by the LED light and the minimum obstacle distance, resulting in a collision. This was due to system uncertainties (e.g., environmental noise and communication delay), affecting the robot reaction. The DWA+MPL, on the other hand, generated consistent behaviors throughout five successful trials, as shown in the video. The figure also shows that the robot with the MPL could proactively adapt its speed and steer away from the human during 1.0--2.5 s. The reduced speed gave the robot more time to deal with the uncertainties.
+
 
 ## Supervised Learning vs Unsupervised Learning 
 
