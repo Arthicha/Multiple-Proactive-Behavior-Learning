@@ -6,12 +6,13 @@ Smooth and safe navigation is an important feature of mobile robots for service 
 
 Project page: https://ens-lab.sdu.dk/loft-project/
 
-# Content
+## Content
 
-- [Simulation Experiment](#Simulaton_Experiment)
-- [Setup](#Setup)
+- [Simulation Experiment](##Simulaton_Experiment)
+- [Usage](##Usage)
 
-# Simulation Experiment
+
+## Simulation Experiment
 
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
@@ -19,61 +20,8 @@ static environment            |  dynamic environment
 
 
 
-# Setup
 
-### Setup: Planning and Neural Control
-- build the projects and add the following command to ``` ~/.bashrc ```
-
-add ros path
-```
-source /opt/ros/noetic/setup.bash
-```
-
-add project directory (i.e., the directory where LOFT folder locates). For example, ``` /home/zubuntu/Projects ```
-```
-export PROJECT_PATH = /home/zubuntu/Projects
-```
-
-add project directory
-```
-source $PROJECT_PATH/LOFT/software/projects/loft_alpha/dwa_planner/catkin_ws/devel/setup.bash --extend
-source $PROJECT_PATH/LOFT/software/projects/loft_alpha/robot_control/catkin_ws/devel/setup.bash --extend
-source $PROJECT_PATH/LOFT/software/projects/loft_alpha/neural_control/catkin_ws/devel/setup.bash --extend
-source $PROJECT_PATH/LOFT/software/projects/loft_alpha/joystick/catkin_ws/devel/setup.bash --extend
-source $PROJECT_PATH/LOFT/software/projects/loft_alpha/socket/catkin_ws/devel/setup.bash --extend
-```
-
-### Setup: Human Detection
-
-### Setup: Robot Interface
-
-# Running
-
-### Running: ROS setup
-- Initialize ros systems (one on the Jetson and another on the PC). Note that two ros systems communicate through pysocket.
-
-### Running: Human Detection
-- Start the human detection programs (DTU) and the publisher socket (SDU).
-
-### Running: Planning and Neural Control (Multiple Proactive Behavior Learning; MPL)
-
-- Start the coppeliasim scene
-- Start the planning and neural control (SDU) by open the rqt gui using the following command.
-```
-cd perspect
-rqt --perspective-file "loft.perspective"
-```
-- The following window will pop up.
-![image](picture/rqt_ui.png)
-- Modify the launch file located in ```software/projects/loft_alpha/robot_control/catkin_ws/src/robot_control/launch/ ```.
-- On the "ROS Launch GUI" tab, select "robot_control" package and "loft.launch" file. Click "START ALL" to run the launch file.
-
-
-### Running: Robot Interface
-- Start the robot interface.
-
-
-# Results
+## Results
 
 ### Supervised Learning vs Unsupervised Learning 
 
@@ -117,3 +65,56 @@ The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as mov
 The figure below presents the numbers of collision in all testing conditions, where red cell denotes the condition with high collisions (>= 20 times) and blue cell denotes the condition with few collisions (<= 10 times). At the maximum performance (i.e., maximum update rate and converged weights), the simulated robot with the proposed control (DWA+MPL 10/50 Hz) can avoid all collisions when there are four moving obstacles with speeds less than 40% of the robot maximum speed. 
 
 ![image](picture/exp_nobs_vobs.PNG)
+
+
+
+## Usage
+
+### Setup: Planning and Neural Control
+- build the projects and add the following command to ``` ~/.bashrc ```
+
+add ros path
+```
+source /opt/ros/noetic/setup.bash
+```
+
+add project directory (i.e., the directory where LOFT folder locates). For example, ``` /home/zubuntu/Projects ```
+```
+export PROJECT_PATH = /home/zubuntu/Projects
+```
+
+add project directory
+```
+source $PROJECT_PATH/LOFT/software/projects/loft_alpha/dwa_planner/catkin_ws/devel/setup.bash --extend
+source $PROJECT_PATH/LOFT/software/projects/loft_alpha/robot_control/catkin_ws/devel/setup.bash --extend
+source $PROJECT_PATH/LOFT/software/projects/loft_alpha/neural_control/catkin_ws/devel/setup.bash --extend
+source $PROJECT_PATH/LOFT/software/projects/loft_alpha/joystick/catkin_ws/devel/setup.bash --extend
+source $PROJECT_PATH/LOFT/software/projects/loft_alpha/socket/catkin_ws/devel/setup.bash --extend
+```
+
+### Setup: Human Detection
+
+### Setup: Robot Interface
+
+### Setup: ROS setup (physical robot)
+- Initialize ros systems (one on the Jetson and another on the PC). Note that two ros systems communicate through pysocket.
+
+### Running: Human Detection
+- Start the human detection programs (DTU) and the publisher socket (SDU).
+
+### Running: Planning and Neural Control (Multiple Proactive Behavior Learning; MPL)
+
+- Start the coppeliasim scene
+- Start the planning and neural control (SDU) by open the rqt gui using the following command.
+```
+cd perspect
+rqt --perspective-file "loft.perspective"
+```
+- The following window will pop up.
+![image](picture/rqt_ui.png)
+- Modify the launch file located in ```software/projects/loft_alpha/robot_control/catkin_ws/src/robot_control/launch/ ```.
+- On the "ROS Launch GUI" tab, select "robot_control" package and "loft.launch" file. Click "START ALL" to run the launch file.
+
+
+### Running: Robot Interface
+- Start the robot interface.
