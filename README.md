@@ -8,9 +8,9 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 ## Content
 
-- [Simulation Experiment](##Simulaton_Experiment)
-- [Navigation under Different Moving Obstacle Numbers and Speeds](##Navigation_under_Different_Moving_Obstacle_Numbers_and_Speeds)
-- [Usage](##Usage)
+- [Simulation Experiment](#Simulaton_Experiment)
+- [Navigation under Different Moving Obstacle Numbers and Speeds](#Navigation_under_Different_Moving_Obstacle_Numbers_and_Speeds)
+- [Usage](#Usage)
 
 
 ## Simulation Experiment
