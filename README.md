@@ -9,7 +9,7 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 ## Content
 
 - [Simulation Experiment](#simulation-experiment)
-- [Navigation with Different Moving Obstacle Numbers and Speeds](#navigation_with_different_moving_obstacle_numbers_and_speeds)
+- [Navigation with Different Moving Obstacle Numbers and Speeds](#navigation-with-different-moving-obstacle-numbers-and-speeds)
 - [Usage](#usage)
 
 
