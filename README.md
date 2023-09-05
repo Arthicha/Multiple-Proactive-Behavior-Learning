@@ -21,6 +21,11 @@ static environment            |  dynamic environment
 ![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
 ![image](picture/smoothness_result_corridor_environment_5hz.jpg) |   ![image](picture/collision_result_dynamic_environment.jpg) 
 
+## Physical Robot Experiment
+
+![image](picture/physical_robot_system.png)
+
+The MPL was implemented on a physical robot, and the robustness to real-world uncertainties investigated, as depicted in the figure. First, the robot was placed 2.0 m in front of a human with the goal located behind. The stereo camera then detected and estimated the human pose using a stereo depth map. Next, the pose was sent to the simulation. Subsequently, the simulation created a obstacle, and the motion planning (DWA or DWA+MPL with the learned weights from the simulation experiment) applied the simulated lidar feedback to continuously produce the velocity commands. The velocity commands were then sent to the robots in real time. Finally, both physical and simulated robots moved to the goal and avoided the human. During the process, an LED light was employed to inform people for simple, safe navigation of the robot. It turned purple when no human was detected, while it turned red, yellow, and green when the closest detected human was below 2.0 m, between 2.0–2.5 m, and over 2.5 m, respectively. 
 
 ## Supervised Learning vs Unsupervised Learning 
 
