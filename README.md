@@ -8,7 +8,7 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 ## Content
 
-- [Simulation Experiment](#Simulation_Experiment)
+- [Simulation Experiment](#Simulation-Experiment)
 - [Experiment: Moving Obstacle Numbers and Speeds](#Experiment:_Moving_Obstacle_Numbers_and_Speeds)
 - [Usage](#Usage)
 
@@ -106,7 +106,7 @@ rqt --perspective-file "loft.perspective"
 
 
 
-## Simulation_Experiment
+## Simulation-Experiment
 
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
