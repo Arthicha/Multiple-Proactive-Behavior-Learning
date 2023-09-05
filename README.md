@@ -9,12 +9,18 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 ## Content
 
 - [Simulation Experiment](#simulation-experiment)
-- [Experiment: Moving Obstacle Numbers and Speeds](#Experiment:_Moving_Obstacle_Numbers_and_Speeds)
-- [Usage](#Usage)
+- [Navigation with Different Moving Obstacle Numbers and Speeds](#navigation_with_different_moving_obstacle_numbers_and_speeds)
+- [Usage](#usage)
 
 
+## Simulation Experiment
 
-## Experiment: Moving Obstacle Numbers and Speeds
+static environment            |  dynamic environment
+:-------------------------:|:-------------------------:
+![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
+![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
+
+## Navigation with Different Moving Obstacle Numbers and Speeds
 
 The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as moving obstacles. The number of simulated people were tested at 4, 6, 8, and 12 people, while the speed of each was tested at 20%, 40%, and 60% of the robot maximum speed. The people cannot see or avoid the robot, so the robot's mission was to avoid collisions while moving toward random goals, which were changed after the acceptance radius of 7 cm was reached. The experiment was run for  1 hrs for each testing condition. 
 
@@ -104,10 +110,3 @@ rqt --perspective-file "loft.perspective"
 ### Running: Robot Interface
 - Start the robot interface.
 
-
-## Simulation Experiment
-
-static environment            |  dynamic environment
-:-------------------------:|:-------------------------:
-![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
-![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
