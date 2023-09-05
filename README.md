@@ -8,17 +8,11 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 ## Content
 
-- [Simulation Experiment](#Simulation-Experiment)
+- [Simulation Experiment](#Simulation_Experiment)
 - [Experiment: Moving Obstacle Numbers and Speeds](#Experiment:_Moving_Obstacle_Numbers_and_Speeds)
 - [Usage](#Usage)
 
 
-## Simulation Experiment
-
-static environment            |  dynamic environment
-:-------------------------:|:-------------------------:
-![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
-![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
 
 ## Experiment: Moving Obstacle Numbers and Speeds
 
@@ -109,3 +103,12 @@ rqt --perspective-file "loft.perspective"
 
 ### Running: Robot Interface
 - Start the robot interface.
+
+
+
+## Simulation_Experiment
+
+static environment            |  dynamic environment
+:-------------------------:|:-------------------------:
+![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
+![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
