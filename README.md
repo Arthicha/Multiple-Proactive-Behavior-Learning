@@ -8,7 +8,8 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 # Content
 
-[Simulation Experiment](#Simulaton-Experiment)
+[Simulation Experiment](#Simulaton_Experiment)
+[Setup](#Setup)
 
 # Simulation Experiment
 
