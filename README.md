@@ -1,6 +1,6 @@
 # Unsupervised Multiple Proactive Behavior Learning (MPL)
 
-![control](picture/control.png)
+![control](picture/control.jpg)
 
 Project page: https://ens-lab.sdu.dk/loft-project/
 
