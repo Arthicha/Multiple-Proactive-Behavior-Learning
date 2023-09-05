@@ -19,7 +19,7 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
 ![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
-![image](picture/smoothness_result_corridor_environment_5hz.jpg) |   ![image](picture/collision_result_dynamic_environment_2hz.jpg) 
+![image](picture/smoothness_result_corridor_environment_5hz.jpg) |   ![image](picture/collision_result_dynamic_environment.jpg) 
 
 
 ## Supervised Learning vs Unsupervised Learning 
