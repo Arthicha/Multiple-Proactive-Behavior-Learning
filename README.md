@@ -1,4 +1,4 @@
-# Multiple Proactive Behavior Learning (MPL)
+# Unsupervised Multiple Proactive Behavior Learning (MPL)
 
 ![control](picture/control.png)
 
