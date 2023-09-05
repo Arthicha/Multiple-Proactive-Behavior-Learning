@@ -9,8 +9,8 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 ## Content
 
 - [Simulation Experiment](#simulation-experiment)
-- [Physical Robot Experiment](#physical_robot_experiment)
-- [Supervised Learning vs Unsupervised Learning](#supervised_learning_vs_unsupervised_learning)
+- [Physical Robot Experiment](#physical-robot-experiment)
+- [Supervised Learning vs Unsupervised Learning](#supervised-learning-vs-unsupervised-learning)
 - [Navigation with Different Moving Obstacle Numbers and Speeds](#navigation-with-different-moving-obstacle-numbers-and-speeds)
 - [Usage](#usage)
 
