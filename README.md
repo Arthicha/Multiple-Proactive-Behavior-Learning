@@ -8,12 +8,12 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 ## Content
 
-- [Experiment: Simulation Experiment](#Experiment:_Simulation_Experiment)
+- [Simulation Experiment](#Simulation_Experiment)
 - [Experiment: Moving Obstacle Numbers and Speeds](#Experiment:_Moving_Obstacle_Numbers_and_Speeds)
 - [Usage](#Usage)
 
 
-## Experiment: Simulation Experiment
+## Simulation Experiment
 
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
