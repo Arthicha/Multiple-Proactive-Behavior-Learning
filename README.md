@@ -8,21 +8,19 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 
 ## Content
 
-- [Simulation Experiment](#Simulaton_Experiment)
-- [Navigation under Different Moving Obstacle Numbers and Speeds](#Navigation_under_Different_Moving_Obstacle_Numbers_and_Speeds)
+- [Simulation Experiment](#Experiment:_Simulation_Experiment)
+- [Navigation under Different Moving Obstacle Numbers and Speeds](#Experiment:_Moving_Obstacle_Numbers_and_Speeds)
 - [Usage](#Usage)
 
 
-## Simulation Experiment
+## Experiment: Simulation Experiment
 
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
 ![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
 ![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
 
-
-
-## Navigation under Different Moving Obstacle Numbers and Speeds
+## Experiment: Moving Obstacle Numbers and Speeds
 
 The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as moving obstacles. The number of simulated people were tested at 4, 6, 8, and 12 people, while the speed of each was tested at 20%, 40%, and 60% of the robot maximum speed. The people cannot see or avoid the robot, so the robot's mission was to avoid collisions while moving toward random goals, which were changed after the acceptance radius of 7 cm was reached. The experiment was run for  1 hrs for each testing condition. 
 
