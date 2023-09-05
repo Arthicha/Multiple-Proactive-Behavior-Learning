@@ -9,6 +9,7 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 ## Content
 
 - [Simulation Experiment](##Simulaton_Experiment)
+- [Navigation under Different Moving Obstacle Numbers and Speeds](##Navigation_under_Different_Moving_Obstacle_Numbers_and_Speeds)
 - [Usage](##Usage)
 
 
@@ -17,8 +18,17 @@ Project page: https://ens-lab.sdu.dk/loft-project/
 static environment            |  dynamic environment
 :-------------------------:|:-------------------------:
 ![image](picture/static_simulation.gif) |   ![image](picture/dynamic_simulation.gif) 
+![image](picture/smoothness_result_corridor_environment_5hz.png) |   ![image](picture/collision_result_dynamic_environment_2hz.png) 
 
 
+
+## Navigation under Different Moving Obstacle Numbers and Speeds
+
+The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as moving obstacles. The number of simulated people were tested at 4, 6, 8, and 12 people, while the speed of each was tested at 20%, 40%, and 60% of the robot maximum speed. The people cannot see or avoid the robot, so the robot's mission was to avoid collisions while moving toward random goals, which were changed after the acceptance radius of 7 cm was reached. The experiment was run for  1 hrs for each testing condition. 
+
+The figure below presents the numbers of collision in all testing conditions, where red cell denotes the condition with high collisions (>= 20 times) and blue cell denotes the condition with few collisions (<= 10 times). At the maximum performance (i.e., maximum update rate and converged weights), the simulated robot with the proposed control (DWA+MPL 10/50 Hz) can avoid all collisions when there are four moving obstacles with speeds less than 40% of the robot maximum speed. 
+
+![image](picture/exp_nobs_vobs.PNG)
 
 
 ## Results
@@ -47,24 +57,7 @@ It can also be seen that the deep network model (DWA+MPL (deep net, sup.)) can l
 In contrast, our approach (DWA+MPL (single net, unsup.)), adapting the control parameters online, can generate adaptive linear and angular velocity commands, i.e., low positive linear velocity command at the beginning to gradually decrease the robot speed, then a higher speed command to reach and follow the target DWA velocity profile, and finally a zero speed to stop the robot at point B. At the same time, the angular velocity command with a negative value larger than the DWA command was generated during obstacle detection. This turns the robot further away from the obstacle and ensures that the robot successfully avoided the obstacle. This suggests that a simple model with a fast update frequency and adaptive control gains (adjustable online), as proposed here, is an efficient method for mobile robot control.
 
 
-### Corridor Simulation
 
-![image](picture/smoothness_result_corridor_environment_5hz.png)
-
-
-### Dynamic Simulated Environment
-
-
-![image](picture/collision_result_dynamic_environment_2hz.png)
-
-
-#### Navigation under Different Moving Obstacle Numbers and Speeds
-
-The robot was placed in a 10.0 x 10.0 m2 space with walking people acting as moving obstacles. The number of simulated people were tested at 4, 6, 8, and 12 people, while the speed of each was tested at 20%, 40%, and 60% of the robot maximum speed. The people cannot see or avoid the robot, so the robot's mission was to avoid collisions while moving toward random goals, which were changed after the acceptance radius of 7 cm was reached. The experiment was run for  1 hrs for each testing condition. 
-
-The figure below presents the numbers of collision in all testing conditions, where red cell denotes the condition with high collisions (>= 20 times) and blue cell denotes the condition with few collisions (<= 10 times). At the maximum performance (i.e., maximum update rate and converged weights), the simulated robot with the proposed control (DWA+MPL 10/50 Hz) can avoid all collisions when there are four moving obstacles with speeds less than 40% of the robot maximum speed. 
-
-![image](picture/exp_nobs_vobs.PNG)
 
 
 
