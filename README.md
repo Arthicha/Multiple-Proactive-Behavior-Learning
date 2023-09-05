@@ -1,5 +1,7 @@
 # Unsupervised Multiple Proactive Behavior Learning (MPL)
 
+Smooth and safe navigation is an important feature of mobile robots for service applications, such as the transportation on a construction site with safe worker-robot interaction. While different control approaches have been proposed, they are still limited by the need for model-based assumptions, true training target/reward function, and training sample efficiency. To overcome these limitations, this study proposes a control architecture with a generic plug-and-play online MPL module. The MPL updates its weights unsupervisedly by correlating its sensory input to a local planner command, acting as an adaptable proactive training input. As a result, the robot autonomously and quickly learns and balances various proactive behaviors (smooth motion and collision avoidance) for smooth and safe navigation. Compared with a conventional control approach, this control architecture with leads to (1) a 29% improvement in the smoothness of robot motion in a static environment and (2) trading motion smoothness for up to 88% fewer collisions along with a 15% better success rate in a highly dynamic environment.
+
 ![image](picture/control.png)
 
 Project page: https://ens-lab.sdu.dk/loft-project/
